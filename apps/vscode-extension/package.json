@@ -1,0 +1,87 @@
+{
+  "name": "open-talons-vscode",
+  "displayName": "Open Talons",
+  "description": "🦅 AI agent for crypto, coding, research — 22 agents, 12 LLM providers",
+  "version": "1.0.0",
+  "publisher": "talons-protocol",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/muammeryldrm42/talonssss.git" },
+  "homepage": "https://github.com/muammeryldrm42/talonssss",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["AI", "Chat", "Other"],
+  "keywords": ["ai", "agent", "crypto", "solana", "claude", "openai", "ollama", "llm"],
+  "icon": "resources/icon.png",
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "openTalons",
+          "title": "Open Talons",
+          "icon": "resources/icon-sidebar.svg"
+        }
+      ]
+    },
+    "views": {
+      "openTalons": [
+        {
+          "type": "webview",
+          "id": "openTalons.chatView",
+          "name": "🦅 Open Talons Chat"
+        }
+      ]
+    },
+    "commands": [
+      { "command": "openTalons.openChat", "title": "Open Talons: Open Chat" },
+      { "command": "openTalons.askAboutSelection", "title": "Open Talons: Ask About Selection" },
+      { "command": "openTalons.settings", "title": "Open Talons: Settings" }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "openTalons.askAboutSelection",
+          "when": "editorHasSelection",
+          "group": "1_modification"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "openTalons.askAboutSelection",
+        "key": "ctrl+alt+t",
+        "mac": "cmd+alt+t",
+        "when": "editorHasSelection"
+      }
+    ],
+    "configuration": {
+      "title": "Open Talons",
+      "properties": {
+        "openTalons.defaultProvider": {
+          "type": "string",
+          "default": "groq",
+          "enum": ["anthropic", "openai", "groq", "gemini", "deepseek", "openrouter"],
+          "description": "Default LLM provider"
+        },
+        "openTalons.defaultAgent": {
+          "type": "string",
+          "default": "auto",
+          "enum": ["auto", "code", "crypto", "solana", "bagsfm", "security", "research"],
+          "description": "Default agent mode"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3",
+    "@vscode/vsce": "^3.2.0"
+  }
+}

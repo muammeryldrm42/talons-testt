@@ -1,0 +1,35 @@
+{
+  "name": "@open-talons/telegram-bot",
+  "version": "1.0.0",
+  "description": "Standalone Telegram bot for Open Talons agents",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": { "open-talons-bot": "./dist/index.js" },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@open-talons/core": "workspace:*",
+    "@open-talons/plugin-bagsfm": "workspace:*",
+    "@open-talons/plugin-pumpfun": "workspace:*",
+    "@open-talons/plugin-solana": "workspace:*",
+    "@open-talons/plugin-crypto": "workspace:*",
+    "@open-talons/plugin-security": "workspace:*",
+    "@open-talons/plugin-trading": "workspace:*",
+    "@open-talons/plugin-research": "workspace:*",
+    "@open-talons/plugin-defi": "workspace:*",
+    "@open-talons/plugin-twitter": "workspace:*",
+    "@open-talons/plugin-onchain": "workspace:*",
+    "dotenv": "^16.4.7",
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.9.0"
+  },
+  "engines": { "node": ">=18" }
+}

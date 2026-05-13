@@ -1,0 +1,20 @@
+{
+  "name": "@open-talons/plugin-imagegen",
+  "version": "1.0.0",
+  "description": "Image generation (DALL-E, Stable Diffusion, Replicate, Together) + Vision",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md"],
+  "scripts": { "build": "tsc", "clean": "rm -rf dist" },
+  "dependencies": {
+    "@open-talons/plugin-sdk": "workspace:*",
+    "@open-talons/core": "workspace:*",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": { "typescript": "^5.6.3", "@types/node": "^22.9.0" },
+  "engines": { "node": ">=18" },
+  "publishConfig": { "access": "public" }
+}
