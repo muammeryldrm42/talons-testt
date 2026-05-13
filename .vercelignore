@@ -1,3 +1,7 @@
+﻿apps/docs
+apps/cli
+apps/vscode-extension
+apps/telegram-bot
 packages
 examples
 docs
