@@ -130,6 +130,16 @@ talons.setLLM("groq", "llama-3.3-70b-versatile");
 
 ## 🤝 Contributing
 
+## Star History
+
+<a href="https://www.star-history.com/?type=date&repos=openvesper%2Fopenvesper">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=openvesper/openvesper&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=openvesper/openvesper&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=openvesper/openvesper&type=date&legend=top-left" />
+ </picture>
+</a>
+
 PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
