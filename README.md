@@ -131,7 +131,7 @@ talons.setLLM("groq", "llama-3.3-70b-versatile");
 ## 🤝 Contributing
 
 PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
-
+![Divider](http://localhost:3000/api/divider?style=gradient&width=900&height=60&color=ff5b14&color2=00ffd1&thickness=2&animated=true)
 ---
 
 ## 📜 License
